@@ -89,4 +89,11 @@ plt.title("K-means Clustering")
 plt.legend()
 plt.show()
 
+"""
+COMMENT:
+Large clusters dominate the objective
 
+Small clusters contribute very little to the total loss
+
+-> K-means is strongly biased toward large clusters and can ignore or absorb small clusters when sizes are highly imbalanced.
+"""
