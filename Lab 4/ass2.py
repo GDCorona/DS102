@@ -31,6 +31,7 @@ mean_face = np.mean(X, axis=0)
 X_centered = X - mean_face
 # Compute covariance matrix, Shape: (150, 150)
 cov_small = np.dot(X_centered, X_centered.T) / (X_centered.shape[0] - 1)
+# Eigen decomposition
 eigvals, eigvecs_small = np.linalg.eigh(cov_small)
 # Sort descending. Largest eigenvalue = most variance
 idx = np.argsort(eigvals)[::-1]
@@ -54,3 +55,4 @@ for i in range(20):
     plt.axis('off')
 plt.tight_layout()
 plt.show()
+
